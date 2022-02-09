@@ -65,6 +65,7 @@ html {
 
   #delete-btn{
       grid-column-start: 3;
+      font-size: 36px;
   }
 
   #equal-btn{
