@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body{
+    background-color: #626262;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .calculator{
+    background-color: white;
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 61px 32px 21px 32px;
+    border-radius: 9px;
+  }
+
+  .calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 54px);
+    grid-template-rows: repeat(5, 54px);
+    gap: 15px;
+}
+
+  .calculator button{
+    font-size: 50px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+  }
+
+  .calculator button:hover{
+    transform: scale(1.03);
+  }
+
+  .turquoise{
+    color: #1cdede;
+  }
+
+  #delete-btn{
+      grid-column-start: 3;
+  }
+
+  #equal-btn{
+      color: white;
+      border-radius: 50%;
+      background-color: #1cdede;
+  }
+
+  .calculator-line{
+    border-top: 1px solid #dedede;
+    margin: 0;
+  }
+
+  .calculator-display{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 261px;
+    height: 81px;
+  }
+
+  #actual-number{
+    font-size: 40px;
+  }
+
+  #previus-number{
+    transform: translateX(-8px);
+    font-size: 20px;
+    height: 23px;
+  }
+
+  #previus-number::after{
+    content: '';
+  }
+
+  #zero{
+    grid-column-start: 2;
+  }
+
+  #actual-number.shake, #previus-number.shake{
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97);
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
